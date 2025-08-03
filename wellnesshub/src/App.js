@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Routes, Route , Navigate} from 'react-router-dom'
+import { Routes, Route , } from 'react-router-dom'
 import MySessions from './components/MySessions';
 import SessionEditor from './components/SessionEditor';
 import Dashboard from './components/Dashboard';
@@ -12,8 +12,9 @@ import Navbar from './components/Navbar';
 
 
 
+
 function App() {
-  const token = localStorage.getItem("token");
+  
   
   
   return (
@@ -21,13 +22,13 @@ function App() {
       
       <Navbar/>
     <Routes>
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/my-sessions" element={<MySessions />} />
+      <Route path="/my-sessions/:id" element={<SessionDetails />} />
+      <Route path="/editor" element={<SessionEditor />} />
+      <Route path="/editor/:id" element={<SessionEditor />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/dashboard" element={ token ? <Dashboard /> : <Navigate to= "/login"/>}/>
-      <Route path="/my-sessions" element={token ? <MySessions /> : <Navigate to= "/login"/>} />
-      <Route path="/my-session/:id" element={<SessionDetails/>} />
-      <Route path="/session-editor" element={token ? <SessionEditor/> : <Navigate to= "/login"/>} />
-      <Route path='*' element={<Navigate to="/dashboard"/>}/>
     
     
     </Routes>

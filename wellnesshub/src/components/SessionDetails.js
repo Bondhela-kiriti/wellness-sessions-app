@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import API from "../api";
 
 export default function SessionDetails() {
-  const { id } = useParams(); // gets :id from URL
+  const { id } = useParams();
   const [session, setSession] = useState(null);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function SessionDetails() {
       try {
         const token = localStorage.getItem("token");
         const res = await API.get(`/sessions/my/${id}`, {
-          headers: { Authorization: `Bearer ${token}` }
+          headers: { Authorization: `Bearer ${token}` },
         });
         setSession(res.data);
       } catch (err) {
@@ -24,17 +24,13 @@ export default function SessionDetails() {
   if (!session) return <p>Loading session...</p>;
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ maxWidth: "600px", margin: "auto" }}>
       <h2>{session.title}</h2>
-      <p><b>Status:</b> {session.status}</p>
-      <p><b>Tags:</b> {session.tags.join(", ")}</p>
-      <p>
-        <b>JSON File:</b>{" "}
-        <a href={session.json_file_url} target="_blank" rel="noreferrer">
-          {session.json_file_url}
-        </a>
-      </p>
-      <p><b>Last Updated:</b> {new Date(session.updated_at).toLocaleString()}</p>
+      <p>Status: {session.status}</p>
+      <p>Tags: {session.tags.join(", ")}</p>
+      <a href={session.json_file_url} target="_blank" rel="noreferrer">
+        View JSON File
+      </a>
     </div>
   );
 }
