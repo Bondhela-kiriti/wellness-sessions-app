@@ -1,49 +1,24 @@
 
-# 🧘‍♀ Wellness Session Manager (Internship Assignment)
+# Wellness Sessions App
 
-A full-stack MERN application to manage wellness sessions — built as part of the Arvyax Full Stack Internship Assignment.
+This is a full‑stack web application designed to help users explore and create wellness sessions like yoga, meditation, and relaxation activities.
 
---
+## ✨ Features
+- 🔐 **Secure Authentication** using JWT + bcrypt
+- 🧘 **View Wellness Sessions** (public & personal)
+- 📝 **Create, Draft, and Publish** custom sessions
+- ⏱ **Auto‑save Drafts** after inactivity
+- 📱 **Responsive Frontend** built with React
+- 🌐 **Backend** powered by Node.js + Express + MongoDB
+- 🚀 Easy to deploy on Netlify (frontend) & Render (backend)
 
-## 📦 Tech Stack
+## 🛠 Tech Stack
+- **Frontend**: React.js
+- **Backend**: Node.js + Express
+- **Database**: MongoDB Atlas
+- **Authentication**: JWT + bcrypt
+- **Deployment**: Netlify (frontend), Render/Railway (backend)
 
-- *Frontend*: React, React Router,
-- *Backend*: Node.js, Express.js
-- *Database*: MongoDB (Atlas)
-- *Authentication*: JWT
-- *Deployment*: Netlify (frontend), Replit (backend)
-
----
-
-## 🔐 Authentication
-
-- Register & login using email + password
-- JWT token saved in localStorage
-- Protected routes with middleware
-
----
-
-## ✍ Features
-
-### ✅ User Auth
-- Register / Login
-- Secure token-based auth
-
-### ✅ Session Management (CRUD)
-- Save session as draft
-- Publish session
-- Delete session
-- View all my sessions (draft + published)
-- Auto-fill session form with JSON URL (bonus)
-
-### ✅ Routes Tested in Postman
-- POST /api/auth/register
-- POST /api/auth/login
-- POST /api/my-sessions/save-draft
-- POST /api/my-sessions/publish
-- GET /api/my-sessions
-- GET /api/my-sessions/:id
-- DELETE /api/my-sessions/:id
 
 
 ## 🙌 Done by:
