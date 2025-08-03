@@ -10,14 +10,14 @@ This is a full‑stack web application designed to help users explore and create
 - ⏱ **Auto‑save Drafts** after inactivity
 - 📱 **Responsive Frontend** built with React
 - 🌐 **Backend** powered by Node.js + Express + MongoDB
-- 🚀 Easy to deploy on Netlify (frontend) & Render (backend)
+
 
 ## 🛠 Tech Stack
 - **Frontend**: React.js
 - **Backend**: Node.js + Express
 - **Database**: MongoDB Atlas
 - **Authentication**: JWT + bcrypt
-- **Deployment**: Netlify (frontend), Render/Railway (backend)
+  
 
 
 
